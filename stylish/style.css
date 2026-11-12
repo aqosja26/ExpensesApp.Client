@@ -1,0 +1,278 @@
+
+/* ===== GENERAL ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.page {
+    padding: 40px 0;
+}
+
+.narrow {
+    max-width: 650px;
+}
+
+/* ===== HEADER ===== */
+.site-header {
+    background: #1e293b;
+    color: white;
+    padding: 18px 0;
+}
+
+.header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.brand {
+    color: white;
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.nav {
+    display: flex;
+    gap: 25px;
+}
+
+.nav a {
+    color: #cbd5e1;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.nav a:hover {
+    color: white;
+}
+
+.clock {
+    color: #38bdf8;
+    font-weight: bold;
+}
+
+/* ===== CARDS ===== */
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+    margin-bottom: 25px;
+}
+
+.card h2 {
+    color: #1e293b;
+    margin-bottom: 25px;
+}
+
+/* ===== FORM ===== */
+.field {
+    margin-bottom: 20px;
+}
+
+.field label {
+    display: block;
+    margin-bottom: 7px;
+    font-weight: bold;
+    color: #334155;
+}
+
+.field input,
+.field select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 7px;
+    font-size: 15px;
+    background: white;
+}
+
+.field input:focus,
+.field select:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37,99,235,0.12);
+}
+
+/* ===== ERROR MESSAGES ===== */
+.error {
+    display: block;
+    color: #dc2626;
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+/* ===== BUTTONS ===== */
+.btn {
+    padding: 12px 22px;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.btn-primary {
+    background: #2563eb;
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #1d4ed8;
+}
+
+/* ===== EXPENSE LIST ===== */
+.simple-list {
+    list-style: none;
+}
+
+.simple-list li {
+    padding: 12px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.hint {
+    color: #64748b;
+    font-size: 14px;
+}
+
+.hint a {
+    color: #2563eb;
+    text-decoration: none;
+}
+
+/* ===== TOAST ===== */
+.toast {
+    display: none;
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background: #1e293b;
+    color: white;
+    padding: 14px 22px;
+    border-radius: 8px;
+    z-index: 1000;
+}
+
+/* ===== RESPONSIVE ===== */
+@media screen and (max-width: 768px) {
+    .header-row {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .card {
+        padding: 20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .nav {
+        gap: 10px;
+    }
+
+    .nav a {
+        font-size: 14px;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    .toast {
+        left: 15px;
+        right: 15px;
+        text-align: center;
+    }
+}
+
+/* ===== TOTAL EXPENSES ===== */
+.total-box {
+    background: #eff6ff;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+}
+
+.total-box h3 {
+    color: #334155;
+    font-size: 16px;
+}
+
+.total-box p {
+    color: #2563eb;
+    font-size: 28px;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+/* ===== EXPENSE TABLE ===== */
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.expense-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    text-align: left;
+}
+
+.expense-table th {
+    background: #1e293b;
+    color: white;
+    padding: 14px;
+}
+
+.expense-table td {
+    padding: 14px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.expense-table tbody tr:hover {
+    background: #f8fafc;
+}
+
+/* ===== DELETE BUTTON ===== */
+.delete-btn {
+    background: #dc2626;
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.delete-btn:hover {
+    background: #b91c1c;
+}
+
+/* ===== EMPTY STATE ===== */
+#empty-state {
+    text-align: center;
+    padding: 20px;
+}
